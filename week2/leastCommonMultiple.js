@@ -3,16 +3,13 @@ process.stdin.setEncoding('utf8');
 var data = ""
 
 function leastCommonMultiple(a, b) {
-  var gcd = greatestCommonDivisor(a, b)
-  return ((a / gcd) * b)
+  var gcd = greatestCommonDivisor(a, b);
+  return ((a / gcd) * b);
 }
 
 function greatestCommonDivisor(a, b) {
-  if (b === 0) {
-    return a;
-  } else {
-    return greatestCommonDivisor(b, a % b);
-  }
+  if (b === 0) return a;
+  return greatestCommonDivisor(b, a % b);
 }
 
 process.stdin.on('end', function() {

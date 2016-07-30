@@ -32,14 +32,3 @@ process.stdin.on('readable', function(){
   }
 })
 
-  while (capacity > 0) {
-    for(var i = 0; i < knapsackIngredientArray.length; ++i) {
-      if (capacity >= knapsackIngredientArray[i].weight) {
-        capacity -= knapsackIngredientArray[i].weight
-        finalCalorie += knapsackIngredientArray[i].calorie
-      } else {
-        finalCalorie += knapsackIngredientArray[i].caloriesPerUnit * capacity
-        capacity = 0
-      }
-    }
-  }
